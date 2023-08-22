@@ -26,7 +26,7 @@
  * @f: the function associated
  */
 
-struct fmt
+struct format
 {
 	char *id;
 	int (*f)(va_list, char[], int, int, int, int);
@@ -35,11 +35,11 @@ struct fmt
 /**
  * typedef struct fmt fmt_t - Structop
  *
- * @fmt: the format
+ * @format: the format
  * @fmt_t: the function associated.
  */
 
-typedef struct fmt fmt_t;
+typedef struct format fmt_t;
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
