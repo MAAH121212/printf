@@ -28,7 +28,7 @@
 
 struct format
 {
-	char *id;
+	char id;
 	int (*f)(va_list, char[], int, int, int, int);
 };
 
