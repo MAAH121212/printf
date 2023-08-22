@@ -25,6 +25,7 @@ int flags, int width, int precision, int size)
 		{'r', print_reverse}, {'R', print_rot13_string}, {'\0', NULL}
 	};
 	for (k = 0; fmt_types[k].id != '\0'; k++)
+	{
 		if (fmt[*i] == fmt_types[k].id)
 			return (fmt_types[k].f(list, buffer, flags, width, precision, size));
 		if (fmt_types[k].id == '\0')
@@ -46,6 +47,7 @@ int flags, int width, int precision, int size)
 			unknown_len += write(1, &fmt[*i], 1);
 			return (unknown_len);
 		}
+	}
 		return (printed_chars);
 }
 
