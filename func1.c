@@ -63,7 +63,7 @@ int flags, int width, int precision, int size)
 	}
 	if (flags & F_HASH && init_num != 0)
 
-		buffert[i--] = '0';
+		buffer[i--] = '0';
 	i++;
 	return (write_unsned(0, i, buffer, flags, width, precision, size));
 }

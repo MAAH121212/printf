@@ -19,14 +19,14 @@
 #define S_SHORT 1
 
 /**
- * struct format - Struct op
+ * struct fmt - Struct op
  *
  * @id: the format
  *
  * @f: the function associated
  */
 
-struct format
+struct fmt
 {
 	char *id;
 	int (*f)(va_list, char[], int, int, int, int);
@@ -41,10 +41,8 @@ struct format
 
 typedef struct fmt fmt_t;
 int _printf(const char *format, ...);
-int _putchar(char c);
-int handle_print(const char *fmt, int *i, va_list list, char buffer[],
-int flags, int width, int precision, int size);
-
+int handle_print(const char *fmt, int *i,
+va_list list, char buffer[], int flags, int width, int precision, int size);
 /* Funtions to print chars and strings */
 
 int print_char(va_list types, char buffer[],
@@ -71,6 +69,10 @@ int print_hexa_upper(va_list types, char buffer[],
 int flags, int width, int precision, int size);
 int print_hexa(va_list types, char map_to[], char buffer[],
 int flags, char flag_ch, int width, int precision, int size);
+
+/* Function to print non printable characters */
+int print_non_printable(va_list types, char buffer[],
+	int flags, int width, int precision, int size);
 
 /* Funcion to print memory address */
 
@@ -103,7 +105,7 @@ int flags, int width, int precision, int size);
 int write_num(int i, char bff[], int flags, int width,
 int precision, int length, char padd, char extra_c);
 int write_pointer(char buffer[], int ind, int length,
-int flags, int width, int precision, int size);
+int width, int flags, char padd, char extra_c, int padd_start);
 int write_unsned(int is_negative, int ind, char buffer[],
 int flags, int width, int precision, int size);
 
