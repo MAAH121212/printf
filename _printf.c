@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 	params_t params = PARAMS_INIT;
 
 	va_start(ap, format);
+
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
 	if ((format[0] == '%' && format[1] == ' ' && !format[2]))

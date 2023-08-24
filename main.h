@@ -15,7 +15,7 @@
 #define PARAMS_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
 #define CONVERT_LOWERCASE 1
-#define CONVERT_UNSIGNED 2
+#define CONVERT_UNSIGNED2
 
 /**
  * struct parameters - holds information about formatting flags and modifiers
@@ -74,7 +74,7 @@ int print_unsigned(va_list ap, params_t *params);
 int print_address(va_list ap, params_t *params);
 
 int (*get_specifier(char *s))(va_list ap, params_t *params);
-int get_print_func(char *s, va_list ap ,params_t *params);
+int get_print_func(char *s, va_list ap, params_t *params);
 int get_flag(char *s, params_t *params);
 int get_modifier(char *s, params_t *params);
 char *get_width(char *s, params_t *params, va_list ap);
