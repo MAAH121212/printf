@@ -27,17 +27,17 @@ int print_char(va_list ap, params_t *params)
 */
 int print_int(va_list ap, params_t *params)
 {
-	long l;
+	long q;
 
 	if (params->l_modifier)
-		l = va_arg(ap, long);
+		q = va_arg(ap, long);
 	else if (params->h_modifier)
-		l = (short int)va_arg(ap, int);
+		q = (short int)va_arg(ap, int);
 
 	else
-		l = (int)va_arg(ap, int);
+		q = (int)va_arg(ap, int);
 
-	return (print_number(convert(1, 10, 0, params), params));
+	return (print_number(convert(q, 10, 0, params), params));
 }
 
 /**
