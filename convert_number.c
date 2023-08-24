@@ -25,6 +25,10 @@ int print_hex(va_list ap, params_t *params)
 	params->unsign = 1;
 	return (c += print_number(str, params));
 }
+
+int print_HEX (va_list ap, params_t *params)//this function wants to be filled and i'm sorry it was 3 am bro
+{
+
 /**
  * print_binary - prints unsigned binary number
  * @ap: the argument pointer
