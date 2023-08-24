@@ -15,7 +15,7 @@
 #define PARAMS_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
 #define CONVERT_LOWERCASE 1
-#define CONVERT_UNSIGNED2
+#define CONVERT_UNSIGNED 2
 
 /**
  * struct parameters - holds information about formatting flags and modifiers
