@@ -11,7 +11,7 @@ int _puts(char *str)
 
 	while (*str)
 		_putchar(*str++);
-	return (a - str);
+	return (str - a);
 }
 
 /**
@@ -28,7 +28,7 @@ int _putchar(int c)
 
 	if (c == BUFF_FLUSH || i >= OUTPUT_BUFF_SIZE)
 	{
-		write(1, &buf, i);
+		write(1, buf, i);
 		i = 0;
 	}
 	if (c != BUFF_FLUSH)
